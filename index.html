@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en"
+  style="--w3m-color-fg-1: rgb(20,20,20); --w3m-color-fg-2: rgb(121,134,134); --w3m-color-fg-3: rgb(158,169,169); --w3m-color-bg-1: rgb(255,255,255); --w3m-color-bg-2: rgb(241,243,243); --w3m-color-bg-3: rgb(228,231,231); --w3m-color-overlay: rgba(0,0,0,0.1); --w3m-accent-color: #3396FF; --w3m-accent-fill-color: #FFFFFF; --w3m-z-index: 89; --w3m-background-color: #3396FF; --w3m-background-border-radius: 8px; --w3m-container-border-radius: 30px; --w3m-wallet-icon-border-radius: 15px; --w3m-wallet-icon-large-border-radius: 30px; --w3m-wallet-icon-small-border-radius: 7px; --w3m-input-border-radius: 28px; --w3m-button-border-radius: 10px; --w3m-notification-border-radius: 36px; --w3m-secondary-button-border-radius: 28px; --w3m-icon-button-border-radius: 50%; --w3m-button-hover-highlight-border-radius: 10px; --w3m-text-big-bold-size: 20px; --w3m-text-big-bold-weight: 600; --w3m-text-big-bold-line-height: 24px; --w3m-text-big-bold-letter-spacing: -0.03em; --w3m-text-big-bold-text-transform: none; --w3m-text-xsmall-bold-size: 10px; --w3m-text-xsmall-bold-weight: 700; --w3m-text-xsmall-bold-line-height: 12px; --w3m-text-xsmall-bold-letter-spacing: 0.02em; --w3m-text-xsmall-bold-text-transform: uppercase; --w3m-text-xsmall-regular-size: 12px; --w3m-text-xsmall-regular-weight: 600; --w3m-text-xsmall-regular-line-height: 14px; --w3m-text-xsmall-regular-letter-spacing: -0.03em; --w3m-text-xsmall-regular-text-transform: none; --w3m-text-small-thin-size: 14px; --w3m-text-small-thin-weight: 500; --w3m-text-small-thin-line-height: 16px; --w3m-text-small-thin-letter-spacing: -0.03em; --w3m-text-small-thin-text-transform: none; --w3m-text-small-regular-size: 14px; --w3m-text-small-regular-weight: 600; --w3m-text-small-regular-line-height: 16px; --w3m-text-small-regular-letter-spacing: -0.03em; --w3m-text-small-regular-text-transform: none; --w3m-text-medium-regular-size: 16px; --w3m-text-medium-regular-weight: 600; --w3m-text-medium-regular-line-height: 20px; --w3m-text-medium-regular-letter-spacing: -0.03em; --w3m-text-medium-regular-text-transform: none; --w3m-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif; --w3m-font-feature-settings: 'tnum' on, 'lnum' on, 'case' on; --w3m-success-color: rgb(38,181,98); --w3m-error-color: rgb(242, 90, 103); --w3m-overlay-background-color: rgba(0, 0, 0, 0.3); --w3m-overlay-backdrop-filter: none; --w3m-background-image-url: none;">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon-Bl5WQqyB.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tourniquet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css2-B9_rrmsP.?family=Nunito:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="data:application/octet-stream;base64,77u/LyogbGF0aW4gKi8KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdSdWJpayBNb25vIE9uZSc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiB1cmwoLi4vZm9udHMvcnViaWstbW9uby1vbmUvZmlsZXMvcnViaWstbW9uby1vbmUtbGF0aW4tNDAwLW5vcm1hbC53b2ZmMikgZm9ybWF0KCd3b2ZmMicpLCB1cmwoLi4vZm9udHMvcnViaWstbW9uby1vbmUvZmlsZXMvcnViaWstbW9uby1vbmUtbGF0aW4tNDAwLW5vcm1hbC53b2ZmKSBmb3JtYXQoJ3dvZmYnKTsgCiAgdW5pY29kZS1yYW5nZTogVSswMDAwLTAwRkYsVSswMTMxLFUrMDE1Mi0wMTUzLFUrMDJCQi0wMkJDLFUrMDJDNixVKzAyREEsVSswMkRDLFUrMDMwNCxVKzAzMDgsVSswMzI5LFUrMjAwMC0yMDZGLFUrMjBBQyxVKzIxMjIsVSsyMTkxLFUrMjE5MyxVKzIyMTIsVSsyMjE1LFUrRkVGRixVK0ZGRkQ7Cn0KCi8qIGN5cmlsbGljICovCkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnUnViaWsgTW9ubyBPbmUnOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogdXJsKC4uL2ZvbnRzL3J1YmlrLW1vbm8tb25lL2ZpbGVzL3J1YmlrLW1vbm8tb25lLWN5cmlsbGljLTQwMC1ub3JtYWwud29mZjIpIGZvcm1hdCgnd29mZjInKSwgdXJsKC4uL2ZvbnRzL3J1YmlrLW1vbm8tb25lL2ZpbGVzL3J1YmlrLW1vbm8tb25lLWN5cmlsbGljLTQwMC1ub3JtYWwud29mZikgZm9ybWF0KCd3b2ZmJyk7IAogIHVuaWNvZGUtcmFuZ2U6IFUrMDMwMSxVKzA0MDAtMDQ1RixVKzA0OTAtMDQ5MSxVKzA0QjAtMDRCMSxVKzIxMTY7Cn0KCi8qIGxhdGluLWV4dCAqLwpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ1J1YmlrIE1vbm8gT25lJzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IHVybCguLi9mb250cy9ydWJpay1tb25vLW9uZS9maWxlcy9ydWJpay1tb25vLW9uZS1sYXRpbi1leHQtNDAwLW5vcm1hbC53b2ZmMikgZm9ybWF0KCd3b2ZmMicpLCB1cmwoLi4vZm9udHMvcnViaWstbW9uby1vbmUvZmlsZXMvcnViaWstbW9uby1vbmUtbGF0aW4tZXh0LTQwMC1ub3JtYWwud29mZikgZm9ybWF0KCd3b2ZmJyk7IAogIHVuaWNvZGUtcmFuZ2U6IFUrMDEwMC0wMkJBLFUrMDJCRC0wMkM1LFUrMDJDNy0wMkNDLFUrMDJDRS0wMkQ3LFUrMDJERC0wMkZGLFUrMDMwNCxVKzAzMDgsVSswMzI5LFUrMUQwMC0xREJGLFUrMUUwMC0xRTlGLFUrMUVGMi0xRUZGLFUrMjAyMCxVKzIwQTAtMjBBQixVKzIwQUQtMjBDMCxVKzIxMTMsVSsyQzYwLTJDN0YsVStBNzIwLUE3RkY7Cn0KCg==">
+  <style>
+    @keyframes slide-in-one-tap {
+      from {
+        transform: translateY(80px);
+      }
+
+      to {
+        transform: translateY(0px);
+      }
+    }
+
+    .trust-hide-gracefully {
+      opacity: 0;
+    }
+
+    .trust-wallet-one-tap .hidden {
+      display: none;
+    }
+
+    .trust-wallet-one-tap .semibold {
+      font-weight: 500;
+    }
+
+    .trust-wallet-one-tap .binance-plex {
+      font-family: 'Binance';
+    }
+
+    .trust-wallet-one-tap .rounded-full {
+      border-radius: 50%;
+    }
+
+    .trust-wallet-one-tap .flex {
+      display: flex;
+    }
+
+    .trust-wallet-one-tap .flex-col {
+      flex-direction: column;
+    }
+
+    .trust-wallet-one-tap .items-center {
+      align-items: center;
+    }
+
+    .trust-wallet-one-tap .space-between {
+      justify-content: space-between;
+    }
+
+    .trust-wallet-one-tap .justify-center {
+      justify-content: center;
+    }
+
+    .trust-wallet-one-tap .w-full {
+      width: 100%;
+    }
+
+    .trust-wallet-one-tap .box {
+      transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
+      animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
+      width: 384px;
+      border-radius: 15px;
+      background: #FFF;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      z-index: 1020;
+    }
+
+    .trust-wallet-one-tap .header {
+      gap: 15px;
+      border-bottom: 1px solid #E6E6E6;
+      padding: 10px 18px;
+    }
+
+    .trust-wallet-one-tap .header .left-items {
+      gap: 15px
+    }
+
+    .trust-wallet-one-tap .header .title {
+      color: #1E2329;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+
+    .trust-wallet-one-tap .header .subtitle {
+      color: #474D57;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .trust-wallet-one-tap .header .close {
+      color: #1E2329;
+      cursor: pointer;
+    }
+
+    .trust-wallet-one-tap .body {
+      padding: 9px 18px;
+      gap: 10px;
+
+    }
+
+    .trust-wallet-one-tap .body .right-items {
+      gap: 10px;
+      width: 100%;
+    }
+
+    .trust-wallet-one-tap .body .right-items .wallet-title {
+      color: #1E2329;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    .trust-wallet-one-tap .body .right-items .wallet-subtitle {
+      color: #474D57;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .trust-wallet-one-tap .connect-indicator {
+      gap: 15px;
+      padding: 8px 0;
+    }
+
+    .trust-wallet-one-tap .connect-indicator .flow-icon {
+      color: #474D57;
+    }
+
+    .trust-wallet-one-tap .loading-color {
+      color: #FFF;
+    }
+
+    .trust-wallet-one-tap .button {
+      border-radius: 50px;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      background-color: rgb(5, 0, 255);
+      border-color: rgb(229, 231, 235);
+      cursor: pointer;
+      text-align: center;
+      height: 45px;
+    }
+
+    .trust-wallet-one-tap .button .button-text {
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    .trust-wallet-one-tap .footer {
+      margin: 20px 30px;
+    }
+
+    .trust-wallet-one-tap .check-icon {
+      color: #FFF;
+    }
+
+    @font-face {
+      font-family: 'Binance';
+      src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Binance';
+      src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Binance';
+      src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+      font-weight: 600;
+      font-style: normal;
+    }
+  </style>
+  <style type="text/css">
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: #4B5563;
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px #4B5563, 0 0 5px #4B5563;
+      opacity: 1.0;
+      transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+      border: solid 2px transparent;
+      border-top-color: #4B5563;
+      border-left-color: #4B5563;
+      border-radius: 50%;
+      animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @keyframes nprogress-spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-CUh8-ZlH.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DMi2vTpw.css">
+</head>
+
+
+<body class="font-sans antialiased">
+  <div id="root"></div>
+</body>
+
+</html>
